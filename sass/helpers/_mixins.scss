@@ -1,0 +1,22 @@
+// Sticky Footer
+@mixin sticky-footer($height: size(footer, height), $wrapperSelector: '#page', $footerSelector: 'body>footer')
+{
+    #{$wrapperSelector}
+    {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        margin-bottom: -$height;
+
+        .stick
+        {
+            display: block;
+            height: $height;
+        }
+    }
+
+    #{$footerSelector}
+    {
+        height: $height;
+    }
+}

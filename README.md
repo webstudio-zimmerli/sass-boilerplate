@@ -1,0 +1,1 @@
+# Boilerplate SASS structure
