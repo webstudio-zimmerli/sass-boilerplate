@@ -20,3 +20,42 @@
         height: $height;
     }
 }
+
+// The Form Placeholders
+@mixin form-placeholders($properties)
+{
+    @at-root
+    {
+        ::-webkit-input-placeholder
+        {
+            @each $properyName, $propertyValue in $properties
+            {
+                #{$properyName}: #{$propertyValue}
+            }
+        }
+
+        ::-moz-placeholder
+        {
+            @each $properyName, $propertyValue in $properties
+            {
+                #{$properyName}: #{$propertyValue}
+            }
+        }
+
+        :-ms-input-placeholder
+        {
+            @each $properyName, $propertyValue in $properties
+            {
+                #{$properyName}: #{$propertyValue}
+            }
+        }
+
+        :-moz-placeholder
+        {
+            @each $properyName, $propertyValue in $properties
+            {
+                #{$properyName}: #{$propertyValue}
+            }
+        }
+    }
+}
